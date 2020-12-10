@@ -1,3 +1,6 @@
-require([], function () {
-    console.log('teste require.js');
+
+define(['js/usuario'], function(Usuario) {
+    'use strict';
+    
+    var usuario = new Usuario();
 });

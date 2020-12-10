@@ -30,10 +30,17 @@
  - Utilizar estrutura parecida com o TWM
 
 ## Etapas
-  - [ ] Adicionar dependências em pasta local (não usar node_modules)
-  - [ ] Configurar requireJS para buscar arquivos locais 
-  - [ ] Apresentação básica requireJs
-  - [ ] Criar componente grid
+  - [X] Adicionar dependências em pasta local (não usar node_modules)
+  - [X] Configurar requireJS para buscar arquivos locais 
+  - [X] Apresentação básica requireJs
+  - [X] Carregar dependencia vue 
+  - [X] Criar componente grid
+   - [X] Definir template
+   - [X] Definir estrutura de colunas (props, configuração via template do componente)
+   - [ ] Definir estrutura de colunas (slot, configuração via template da instância)
+
+
+
 
 
 
