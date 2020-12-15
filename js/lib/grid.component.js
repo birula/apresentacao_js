@@ -4,6 +4,7 @@ define(['vue'], function (Vue) {
     <div>
         <table border="1">
             <thead>
+                <slot name="header"></slot>
                 <tr>
                     <th 
                         v-for="(coluna, indice) in colunas" 
@@ -13,6 +14,7 @@ define(['vue'], function (Vue) {
                 </tr>
             </thead>
             <tbody>
+                <slot name="body" v-bind:linhas="dados"></slot>
                 <tr v-for="linha in dados">
                     <td v-for="coluna in colunas">
                         {{linha[coluna.propriedade]}}

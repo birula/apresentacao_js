@@ -13,7 +13,26 @@
         <h3>Nome: {{nome}}</h3>
         <h4>Idade: {{idade}}</h4>
 
+        <!-- Grid com configuração de cabeçalho/corpo via props -->
         <grid v-bind:colunas="colunas" v-bind:dados="dados"></grid>
+        <br>
+        <br>
+        <!-- Grid com configuração de cabeçalho/corpo via slot -->
+        <grid v-bind:dados="dados">
+            <template v-slot:header>
+                <tr>
+                    <td>Total</td>
+                    <td>Fatura</td>
+                </tr>
+            </template>
+            
+            <template v-slot:body="props">
+                <tr v-for="linha in props.linhas">
+                    <td>{{linha.total}}</td>
+                    <td>{{linha.numFatura}}</td>
+                </tr>
+            </template>
+        </grid>
     </div>
 
     <script src="js/vendor/require.js"></script>
