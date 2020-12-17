@@ -7,18 +7,25 @@
 </head>
 
 <body>
-    <h1>página</h1>
+    <h1>Usuário</h1>
 
     <div id="usuario">
-        <h3>Nome: {{nome}}</h3>
-        <h4>Idade: {{idade}}</h4>
+        <h3>Nome: {{usuario.nome}}</h3>
+        <h4>Idade: {{usuario.idade}}</h4>
 
+        <dados-basicos 
+            v-bind:usuario="usuario" 
+            v-on:changed="logBirula" >
+        </dados-basicos>
+
+        <br>
+        <h4>Faturas do usuário</h4>
         <!-- Grid com configuração de cabeçalho/corpo via props -->
-        <grid v-bind:colunas="colunas" v-bind:dados="dados"></grid>
+        <grid v-bind:colunas="colunas" v-bind:dados="faturas"></grid>
         <br>
         <br>
         <!-- Grid com configuração de cabeçalho/corpo via slot -->
-        <grid v-bind:dados="dados">
+        <grid v-bind:dados="faturas">
             <template v-slot:header>
                 <tr>
                     <td>Total</td>
@@ -44,7 +51,7 @@
                 "grid.component": "js/lib/grid.component"
             }
         });
-        require(["js/usuario"]);
+        require(["js/usuario/index"]);
     </script>
 </body>
 

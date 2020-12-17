@@ -37,7 +37,7 @@
   - [X] Criar componente grid
    - [X] Definir template
    - [X] Definir estrutura de colunas (props, configuração via template do componente)
-   - [ ] Definir estrutura de colunas (slot, configuração via template da instância)
+   - [X] Definir estrutura de colunas (slot, configuração via template da instância)
 
 
 
